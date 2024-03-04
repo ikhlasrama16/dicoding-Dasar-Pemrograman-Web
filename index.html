@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="asset/css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>This is Capybara</h1>
+        <p>World biggest rodent</p>
+
+        <nav>
+            <ul>
+                <li><a href="#description">Description</a></li>
+                <li><a href="#anatomy">Anatomy</a></li>
+                <li><a href="#facts">Facts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            <aside>
+                <article  class="card">
+                    <header>
+                        <h2>Capybara</h2>
+                        <p>Biggest Rodent</p>
+                        <figure>
+                            <img src="asset/img/profile.jpg" alt="profile" class="profile-image" id="profile-card">
+                            <figcaption>Profile</figcaption>
+                        </figure>
+                    </header>
+                    <section>
+                    </section>
+                </article>
+            </aside>
+            <article id="description" class="card">
+                <h2>Description</h2>
+                <img src="asset/img/deskripsi.jpg" alt="deskripsi.jpg" class="res-image">
+                <p>
+                    The capybara, scientifically known as "Hydrochoerus hydrochaeris," is a fascinating and unique mammal 
+                    native to South America. It is one of the world's largest rodent species, often referred to as the 
+                    "giant water rodent." Capybaras have sturdy, large bodies with short legs, and they are covered in coarse 
+                    brown, gray, or light brown fur. Their small ears, large eyes, and high-set nose make them well-adapted to 
+                    their semi-aquatic lifestyle. As herbivores, they primarily feed on grass, leaves, and aquatic plants, and 
+                    their social nature is evident as they form groups, called "herds," displaying complex social hierarchies 
+                    and bonding by resting close together or swimming in the water. Capybaras are known for their friendly and 
+                    peaceful disposition towards both humans and other animals, making them a captivating species in South 
+                    America's diverse wildlife.</p>
+            </article>
+            <article id="anatomy" class="card">
+                <h2>Anatomy</h2>
+                <img src="asset/img/anatomy.jpg" alt="anatomy" class="res-image">
+                <p>
+                    The anatomy of a capybara is intriguing and well-suited to its semi-aquatic lifestyle. These large 
+                    rodents have sturdy, barrel-shaped bodies covered in coarse brown, gray, or light brown fur. Their 
+                    short legs and partially webbed feet make them agile swimmers, allowing them to navigate in and out
+                    of water with ease. Capybaras are known for their high-set eyes and small ears, which sit atop their
+                    heads, enabling them to keep a watchful eye on their surroundings while partially submerged in water.
+                    Their adapted nostrils are positioned at the top of their snouts, allowing them to breathe while most
+                    of their bodies are submerged. These unique physical characteristics contribute to their success in
+                    their natural habitat, where they graze on aquatic plants and grasses and interact with their 
+                    fellow capybaras in social herds.</p>
+            </article>
+            <article id="facts">
+                <h2>Facts</h2>
+                <div class="fact-carousel">
+                    <div class="fact-slide">
+                        <h3>Largest in the Rodent Family</h3>
+                        <img src="asset/img/fact1.jpg" alt="fact 1">
+                        <p>Capybaras belong to the rodent family (Rodentia) and are the world's largest rodents. They can 
+                            grow to approximately 1.2 meters in length and weigh between 35 to 66 kilograms. Due to their 
+                            substantial size, they are often referred to as "giant water rodents."
+                        </p>
+                    </div>
+                    
+                    <div class="fact-slide">
+                        <h3>Social Creatures</h3>
+                        <img src="asset/img/fact2.jpg" alt="fact 2">
+                        <p>Capybaras are highly social animals that live in large groups known as "herds" or "groups." 
+                            These groups can range from a few individuals to dozens of capybaras living together. They 
+                            exhibit a complex social structure with leaders in the group and a carefully maintained 
+                            hierarchy.
+                        </p>
+                    </div>
+                    <div class="fact-slide">
+                        <h3>Semi-Aquatic Adaptations</h3>
+                        <img src="asset/img/fact3.jpg" alt="fact 3">
+                        <p>Capybaras are semi-aquatic animals and are excellent swimmers. They have small ears and large eyes,
+                            which allow them to navigate while swimming. Capybaras can also dive and even rest in the water 
+                            to evade predators. They are often found near rivers, and water is an integral part of their 
+                            daily life, serving both as a source of food and a place for shelter.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <p>Capybara Company &#169; 2023</p>
+    </footer>
+</body>
+
+<script>
+    // JavaScript for the carousel
+    let currentSlide = 0;
+
+    function showSlide(slideIndex) {
+        const slides = document.querySelectorAll('.fact-slide');
+        if (slideIndex >= slides.length) {
+            currentSlide = 0;
+        }
+        if (slideIndex < 0) {
+            currentSlide = slides.length - 1;
+        }
+        
+        // Sembunyikan semua faktanya
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+        
+        // Tampilkan faktanya yang sesuai
+        slides[currentSlide].style.display = 'block';
+    }
+
+    showSlide(currentSlide);
+
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+
+    // Automatic carousel navigation
+    setInterval(nextSlide, 5000); // Ganti slide setiap 5 detik
+
+
+</script>
+</html>

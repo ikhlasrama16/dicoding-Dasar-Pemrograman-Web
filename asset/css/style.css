@@ -1,0 +1,169 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+main {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header{
+    background-color: #B0926A;
+    padding: 1rem 0;
+    text-align: center;
+    display: inline;
+    background-color: #B0926A;
+    padding: 1rem 0;
+    text-align: center;
+}
+nav a{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+
+}
+nav a:hover {
+    color: #333;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+nav li{
+    list-style-type: none;
+    margin-right: 20px;
+}
+nav {
+    background-color: #B0926A;
+    padding: 3px;
+    position: sticky;
+    top: 0;
+}
+
+footer{
+    background-color: #B0926A;
+    padding: 1rem 0;
+    text-align: center;
+    color: #fff;
+}
+article {
+    flex: 2;
+}
+  
+aside {
+    flex: 1;
+}
+
+#content{
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#profile-card {
+    border-radius: 50%; 
+    overflow: hidden; 
+    width: 150px; 
+    height: 150px; 
+}
+
+.profile-image {
+    width: 100%; 
+    height: auto; 
+}
+
+.res-image{
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fact-carousel{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.fact-slide h3{
+    margin-top: 0;
+}
+
+.fact-slide img{
+    max-width: 50%;
+    height: auto;
+}
+.fact-slide {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1s;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.fact-slide h3 {
+    color: #333;
+}
+
+.fact-slide p {
+    color: #666;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #content, aside{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: row; /* Mengatur tata letak horizontal */
+      }
+    
+      aside {
+        flex: 0 0 25%; /* Mengatur lebar aside agar tidak mengambil terlalu banyak ruang */
+      }
+}
+
+@media screen and (max-width: 768px) {}
